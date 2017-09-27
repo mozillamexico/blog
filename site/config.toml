@@ -6,7 +6,7 @@ title = "Mozilla México"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3
-disqusShortname = "mozillamx"
+disqusShortname = ""
 googleAnalytics = ""
 pluralizeListTitles = false
 
