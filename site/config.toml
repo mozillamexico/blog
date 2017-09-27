@@ -1,9 +1,99 @@
 baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "My new Victor-Hugo site"
+languageCode = "es-MX"
+languageLang = "es"
+title = "Mozilla México"
 
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+theme = "hugo-future-imperfect"
+preserveTaxonomyNames = true
+paginate = 3
+disqusShortname = "mozillamx"
+googleAnalytics = ""
+pluralizeListTitles = false
+
+[params]
+    # Sets the meta tag description, usually reserved for the main page
+    description          = "Creemos que internet debe permanecer libre, abierto y accesible"
+    # This will appear on the top left of the navigation bar
+    navbarTitle          = "Mozilla México"
+    # set this to the section name if section is not post
+    viewMorePostLink     = "/"
+
+# Optional Params
+    # This will match the navbarTitle to the section of the website
+    dynamicTitles        = false
+    # RSS icon that appear on the sidebar, next to the social media buttons
+    rssAppearAtTop       = true
+    rssAppearAtBottom    = true
+    # Social media buttons that appear on the sidebar
+    socialAppearAtTop    = true
+    socialAppearAtBottom = true
+    categoriesByCount    = true
+    includeReadingTime   = true
+    # The set of favicons used are based on the write-up from this link:
+    # https://github.com/audreyr/favicon-cheat-sheet
+    # Please see the favicon partial template for more information
+    loadFavicon          = false
+    faviconVersion       = ""
+
+    # Disable showing the social sharing links on blog posts
+    socialShareDisabled = false
+
+    # Load custom CSS or JavaScript files. The variable is an array so that you
+    # can load multiple files if necessary. You can also load the standard theme
+    # files by adding the value, "default".
+    # customCSS            = ["default", "/path/to/file"]
+    # customJS             = ["default", "/path/to/file"]
+
+    customCSS            = ["default"]
+    customJS             = ["default"]
+
+# Disqus will take priority over staticman due to its ease of use. Feel free to check out both and decide.
+[params.staticman]
+    staticman = false
+    username  = ""
+    repo      = ""
+    branch    = ""
+
+# parms.intro will appear on the sidebar
+# This is optional, but it's suggested to use
+[params.intro]
+    header    = "Mozilla México"
+
+    paragraph = "Blog"
+
+    about     = "Creemos que internet debe permanecer libre, abierto y accesible"
+
+# This will also appear on the sidebar.
+# A width of less than 100px is recommended
+# This is optional
+[params.intro.pic]
+    src       = "http://farm4.static.flickr.com/3247/3127626301_2af66ba926_o.png"
+    # modify your picture in the shape of a circle or
+    # future imperfect's hexagonal shape
+    circle    = false
+    imperfect = false
+    width     = "80"
+    alt       = "Logotipo de Mozilla México"
+
+# Adjust the amount of recent posts on the sidebar.
+# This is optional. The default value 5 will be used
+[params.postAmount]
+    sidebar = 2
+
+# Set up your menu items in the navigation bar
+# You can use identifier to prepend a font awesome icon to your text
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    identifier = "fa fa-id-card-o"
+    weight = 2
+
+# Insert your username and the icon will apear on the page as long as
+# socialAppearAtTop or socialAppearAtBottom is set to true in the params area
+# The social media icons will appear on the sidebar
+[social]
+    github          = "mozillamexico"
+    facebook        = "mozillamx"
+    twitter         = "mozillamx"
+    email           = "contacto@mozilla-mexico.org"
